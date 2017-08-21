@@ -18,9 +18,36 @@ ul
   margin-bottom: 0;
 }
 
+.active > a
+{
+  color: #000;
+  font-weight: bold;
+}
+
+.bg-footer
+{
+  height: 400px;
+  background: #1A1A1A;
+}
+
+.parques img
+{
+  /*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%) brightness(1000%);
+  margin-top: 15px;
+   text-align: center;
+  width: 60%;
+}
+
+.parque-xelha img
+{
+  filter: grayscale(100%) brightness(100%);
+  width: 60%;
+}
 .border-menu {
     border: 1px solid #000000;
 }
+
 
 .breadcrumb
 {
@@ -32,12 +59,6 @@ ul
   color: #8A8D97;
 }
 
-.active > a
-{
-  color: #000;
-  font-weight: bold;
-}
-
 .breadcrumb > li + li::before {
     color: #ccc;
     content: "/ ";
@@ -46,6 +67,12 @@ ul
 .breadcrumb > li
 {
   display: inline-block;
+}
+
+.center-block
+{
+  -webkit-filter:brightness(1000%);
+
 }
 
 .control-mediaplayer
@@ -82,6 +109,12 @@ ul
 {
   width: 100%;
 
+}
+
+#footer-wrap
+{
+  height: 300px;
+  background: #000000;
 }
 
 .mediaplayer
@@ -124,8 +157,7 @@ ul
 
 .nav-bar  a
 {
-  /*font-size: 14px;*/
-  /*line-height: 16.8px;*/
+
   padding: 10px 0;
   text-align: center;
 
@@ -147,7 +179,7 @@ ul
 .paid-method img
 {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 .quiero
 {
@@ -191,4 +223,11 @@ ul
   font-size: 12px;
   margin-right: 5px;
 
+}
+
+.text-center
+{
+  margin-bottom:15px;
+  margin-top: 20px;
+  width: 100%;
 }

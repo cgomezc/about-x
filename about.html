@@ -15,8 +15,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-
-
+  
 
       <!-- Navigation -->
       <div id="header" >
@@ -152,7 +151,7 @@
 
          <div class="col-md-12">
            <div class="row">
-              <h2>Atractivos principales</h2>
+              <h2>Atractivos principales  </h2>
            </div>
 
            <div class="row">
@@ -246,5 +245,63 @@
    </div>
  </section>
  <!-- End page-content -->
+ <div class="row bg-footer">
+   <div class="container">
+      <div class="row ">
+        <div class="col-md-12">
+          <div class="text-center">
+            <img src="http://2.resources.www.xcaret.com.edgesuite.net/D/Q/Bzo7VT0Q4.png" class="center-block" >
+          </div>
+        </div>
+        <div class="parques col-md-4">
+
+					<img class="img-fluid"  src="http://2.resources.www.xcaret.com.edgesuite.net/i/L/gAM18R4BE.png" alt="Parque Xcaret" title="Parque Xcaret">
+        </div>
+        <div class="parque-xelha col-md-4">
+
+            <img  class="img-fluid"  src="http://www.xcaretexperiencias.com/img/logos/xelha-c.png" alt="Parque Xel-Há" title="Parque Xel-Há">
+        </div>
+        <div class="parques col-md-4">
+            <img class="img-fluid" src="http://2.resources.www.xcaret.com.edgesuite.net/b/-/n1Fpq-dF4.png" alt="Parque Xplor" title="Parque Xplor">
+        </div>
+        <div class="parques col-md-4">
+            <img class="img-fluid" src="http://2.resources.www.xcaret.com.edgesuite.net/E/p/gE972Xiag.png" alt="Tour Chichén Itzá">
+        </div>
+        <div class="parques col-md-4">
+            <img class="img-fluid" src="http://2.resources.www.xcaret.com.edgesuite.net/D/f/906Fu3WEo.png" alt="Tour Xenotes">
+        </div>
+        <div class="parques col-md-4">
+            <img class="img-fluid" src="http://1.resources.www.xcaret.com.edgesuite.net/E/L/0rMTSvEpQ.png" alt="Tour Xoximilco">
+        </div>
+
+      </div>
+   </div>
+ </div>
+ <footer id="footer-wrap" class="row">
+
+
+</footer>
+<!-- End footer -->
+<script src="https://unpkg.com/vue"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.4/vue-resource.min.js"></script>
+<script type="text/javascript">
+console.log("holla");
+    var urlAPI = 'https://experienciasxcaret.github.io/Developers/api/front.json';
+    new Vue({
+    el: 'body',
+    created: function () {
+      this.consultarAPI();
+    },
+    methods:{
+        consultarAPI:function () {
+          this.$http.get(urlAPI)
+              .then(function(respuesta){
+                console.log(respuesta);
+              });
+        }
+    }
+
+  });
+</script>
   </body>
 </html>
