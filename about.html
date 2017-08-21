@@ -15,7 +15,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-  
+
 
       <!-- Navigation -->
       <div id="header" >
@@ -284,24 +284,6 @@
 <!-- End footer -->
 <script src="https://unpkg.com/vue"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.4/vue-resource.min.js"></script>
-<script type="text/javascript">
-console.log("holla");
-    var urlAPI = 'https://experienciasxcaret.github.io/Developers/api/front.json';
-    new Vue({
-    el: 'body',
-    created: function () {
-      this.consultarAPI();
-    },
-    methods:{
-        consultarAPI:function () {
-          this.$http.get(urlAPI)
-              .then(function(respuesta){
-                console.log(respuesta);
-              });
-        }
-    }
-
-  });
-</script>
+<script type="text/javascript" src="js/aboutAPI.js"></script>
   </body>
 </html>
