@@ -85,6 +85,11 @@ ul
   font-weight: bold;
   text-decoration:underline;
 }
+
+.desc-atractivo
+{
+  margin-top: 10px;
+}
 #header
 {
   background: #000000;

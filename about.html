@@ -14,7 +14,8 @@
     <!-- Custom style -->
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body >
+    <div id="wrapper">
 
 
       <!-- Navigation -->
@@ -116,6 +117,7 @@
          <!-- <div class="row"> -->
            <div class="col-md-12 mediaplayer">
 
+              <iframe width="560" height="315" src="www.youtube.com/embed/ac7KhViaVqc" allowfullscreen=""></iframe>
            </div>
          <!-- </div> -->
          <div class="col-md-12">
@@ -154,39 +156,20 @@
               <h2>Atractivos principales  </h2>
            </div>
 
-           <div class="row">
 
-             <div class="col-md-6">
-               <img src="http://www.xcaretexperiencias.com/img/xcaret/xcaret-parque-aerea.jpg" alt=""  class="img-responsive">
-             </div>
-             <div class="col-md-6">
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia felis vitae tortor pharetra pulvinar. Mauris tempor sapien et commodo interdum. Sed lacinia finibus nulla in varius. Maecenas at magna fermentum, hendrerit enim sed, commodo purus. Nunc neque erat, ultrices ac vestibulum eget, placerat sit amet magna. Aliquam libero lacus, feugiat quis neque non, aliquam vehicula felis. Aliquam pellentesque odio tellus, eu dictum turpis dapibus a. Maecenas eget convallis nisi, quis luctus dolor.</p>
-             </div>
-             </div>
-           <div class="row">
-             <div class="col-md-6">
-                <img src="" alt="" class="img-atractivo">
-             </div>
-             <div class="col-md-6">
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia felis vitae tortor pharetra pulvinar. Mauris tempor sapien et commodo interdum. Sed lacinia finibus nulla in varius. Maecenas at magna fermentum, hendrerit enim sed, commodo purus. Nunc neque erat, ultrices ac vestibulum eget, placerat sit amet magna. Aliquam libero lacus, feugiat quis neque non, aliquam vehicula felis. Aliquam pellentesque odio tellus, eu dictum turpis dapibus a. Maecenas eget convallis nisi, quis luctus dolor.</p>
-             </div>
+           <div class="row desc-atractivo" v-for="atractivo in atractivos">
+               <div class="col-md-6">
+                 <a :href="atractivo.link" target="_blank">
+                 <img :src="atractivo.img"  :title="atractivo.titulo"  class="img-responsive">
+                 </a>
+               </div>
+                <div class="col-md-6">
+                  <p> {{ atractivo.desc}} </p>
+                </div>
+
            </div>
-           <div class="row">
-             <div class="col-md-6">
-                <img src="" alt="" class="img-atractivo">
-             </div>
-             <div class="col-md-6">
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia felis vitae tortor pharetra pulvinar. Mauris tempor sapien et commodo interdum. Sed lacinia finibus nulla in varius. Maecenas at magna fermentum, hendrerit enim sed, commodo purus. Nunc neque erat, ultrices ac vestibulum eget, placerat sit amet magna. Aliquam libero lacus, feugiat quis neque non, aliquam vehicula felis. Aliquam pellentesque odio tellus, eu dictum turpis dapibus a. Maecenas eget convallis nisi, quis luctus dolor.</p>
-             </div>
-           </div>
-           <div class="row">
-             <div class="col-md-6">
-               <img src="http://www.xcaretexperiencias.com/img/xcaret/xcaret-mexico-espectacular-pelota.jpg" alt="" class="img-responsive">
-             </div>
-             <div class="col-md-6">
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia felis vitae tortor pharetra pulvinar. Mauris tempor sapien et commodo interdum. Sed lacinia finibus nulla in varius. Maecenas at magna fermentum, hendrerit enim sed, commodo purus. Nunc neque erat, ultrices ac vestibulum eget, placerat sit amet magna. Aliquam libero lacus, feugiat quis neque non, aliquam vehicula felis. Aliquam pellentesque odio tellus, eu dictum turpis dapibus a. Maecenas eget convallis nisi, quis luctus dolor.</p>
-             </div>
-           </div>
+           <!-- End atractivos -->
+
            <div class="row">
              <div class="col-md-6">
 
@@ -281,6 +264,7 @@
 
 
 </footer>
+  </div>
 <!-- End footer -->
 <script src="https://unpkg.com/vue"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.4/vue-resource.min.js"></script>

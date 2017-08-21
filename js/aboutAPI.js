@@ -1,14 +1,18 @@
 var urlAPI = 'https://experienciasxcaret.github.io/Developers/api/front.json';
 new Vue({
-el: 'body',
+el: '#wrapper',
 created: function () {
   this.consultarAPI();
+},
+data: {
+  atractivos : []
 },
 methods:{
     consultarAPI:function () {
       this.$http.get(urlAPI)
           .then(function(respuesta){
-            console.log(respuesta);
+
+          this.atractivos = respuesta.body[0].atractivos;
           });
     }
 }
